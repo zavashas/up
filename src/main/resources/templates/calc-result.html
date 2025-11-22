@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Результат вычисления</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Результат вычисления</h1>
+
+    <p class="result"
+       th:text="${a} + ' ' + ${op} + ' ' + ${b} + ' = ' + ${result}">
+    </p>
+
+    <button class="btn btn-primary" onclick="location.href='/calculator'">
+        Новый расчёт
+    </button>
+    <button class="btn btn-secondary" onclick="location.href='/'">
+        На главную
+    </button>
+</div>
+</body>
+</html>

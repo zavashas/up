@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Результат конвертации</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Результат конвертации</h1>
+
+    <p class="result">
+        <span th:text="${amount}"></span>
+        <span th:text="${from}"></span>
+        =
+        <span th:text="${result}"></span>
+        <span th:text="${to}"></span>
+    </p>
+
+    <p>Курс: <span th:text="${rate}"></span></p>
+
+    <button class="btn btn-primary" onclick="location.href='/converter'">
+        Новая конвертация
+    </button>
+    <button class="btn btn-secondary" onclick="location.href='/'">
+        На главную
+    </button>
+</div>
+</body>
+</html>

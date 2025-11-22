@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Конвертер валют</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Конвертер валют</h1>
+
+    <form action="/convert" method="post">
+        <div class="form-group">
+            <label>Сумма:</label>
+            <input type="number" step="any" name="amount" required>
+        </div>
+
+        <div class="form-group">
+            <label>Из валюты:</label>
+            <select name="from">
+                <option value="RUB">RUB</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>В валюту:</label>
+            <select name="to">
+                <option value="RUB">RUB</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Конвертировать</button>
+        <button type="button" class="btn btn-secondary" onclick="location.href='/'">
+            На главную
+        </button>
+    </form>
+</div>
+</body>
+</html>

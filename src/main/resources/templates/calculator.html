@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Калькулятор</h1>
+
+    <form action="/calculate" method="post">
+        <div class="form-group">
+            <label>Первое число:</label>
+            <input type="number" step="any" name="a" required>
+        </div>
+
+        <div class="form-group">
+            <label>Операция:</label>
+            <select name="op">
+                <option value="+">Сложение (+)</option>
+                <option value="-">Вычитание (-)</option>
+                <option value="*">Умножение (*)</option>
+                <option value="/">Деление (/)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Второе число:</label>
+            <input type="number" step="any" name="b" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Посчитать</button>
+        <button type="button" class="btn btn-secondary" onclick="location.href='/'">
+            На главную
+        </button>
+    </form>
+</div>
+</body>
+</html>
